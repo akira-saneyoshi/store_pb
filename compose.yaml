@@ -1,0 +1,13 @@
+services:
+  protocservice:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: protoc-service
+    hostname: protocservice
+    tty: false
+    volumes:
+      - ./:/opt/protoc_service
+    # command: sh -c "go mod tidy"
+    ports:
+      - 8090:8090
