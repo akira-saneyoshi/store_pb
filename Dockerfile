@@ -14,7 +14,7 @@ RUN apk add --no-cache unzip curl \
   && curl -L https://github.com/protocolbuffers/protobuf/releases/download/v${PROTOBUF_VERSION}/protoc-${PROTOBUF_VERSION}-linux-x86_64.zip -o protoc.zip \
   && unzip protoc.zip \
   && mv /tmp/protoc/bin/* /usr/local/bin/ \
-  && mv /tmp/protoc/include/* /usr/local/include \
+  && mv /tmp/protoc/include /usr/local/include \
   && rm -rf protoc protoc.zip \
   && apk add --no-cache protobuf-dev
 
